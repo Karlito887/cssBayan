@@ -24,6 +24,15 @@ input {
     margin: 0 auto;
 }
 
+.content:hover .accordion .item .header img {
+    display: block;
+    /*// desktop only*/
+}
+
+.content:hover .accordion .item .header .name {
+    color: black;
+}
+
 .accordion {
     width: 100%;
 }
@@ -47,6 +56,13 @@ input {
 .accordion .item .header .name {
     font-size: 1.5rem;
     font-weight: 500;
+    color: #1887e1;
+}
+
+.accordion .item .header img {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: none;
 }
 
 .meme-image {
@@ -56,14 +72,28 @@ input {
     transition: all 300ms;
 }
 
-input:checked + .meme-image {
+input:checked ~ .meme-image {
     display: block;
     height: 400px;
     margin-top: 1rem;
+}
+
+input:checked ~ .header img {
+    transform: rotateZ(45deg);
+    transition: all .3s;
+}
+
+input:checked ~ .header .name {
+    color: black !important;
 }
 
 .item:hover .meme-image {
     display: block;
     height: 400px;
     margin-top: 1rem;
+}
+
+.item:hover .header img {
+    transform: rotateZ(45deg);
+    transition: all .3s;
 }
