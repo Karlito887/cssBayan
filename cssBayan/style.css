@@ -75,7 +75,7 @@ body {
     input:checked ~ .meme-image {
         display: block;
         height: 400px;
-        margin-top: 1rem;
+        margin-top: 1.1rem;
     }
 
     input:checked ~ .header img {
@@ -112,7 +112,6 @@ body {
         font-size: 2.5rem;
     }
 }
-
 @media screen and (min-width: 1920px) {
     .content {
         width: 60%;
